@@ -27,6 +27,6 @@ RUN echo "${CONSUL_SHA256}  /tmp/consul.zip" > /tmp/consul.sha256 && \
     unzip /tmp/consul_ui.zip -d /ui && \
     rm /tmp/consul.zip /tmp/consul_ui.zip
 
-EXPOSE 8300 8301 8301/udp 8302 8302/udp 8400 8500 53 53/udp
+EXPOSE 8300 8301 8301/udp 8302 8302/udp 8400 8500 8600 8600/udp
 
-ENTRYPOINT ["consul", "agent", "-data-dir=/var/lib/consul", "-ui-dir=/ui/dist"]
+ENTRYPOINT ["consul", "agent"]
