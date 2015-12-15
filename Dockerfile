@@ -16,7 +16,7 @@ ADD https://dl.bintray.com/mitchellh/consul/${CONSUL_VERSION}_linux_amd64.zip /t
 ADD https://dl.bintray.com/mitchellh/consul/${CONSUL_VERSION}_web_ui.zip /tmp/consul_ui.zip
 
 # Create the common directories for Consul
-RUN mkdir -p /var/lib/consul && \
+RUN mkdir -p /opt/consul && \
     mkdir -p /etc/consul.d && \
     mkdir -p /ui
 
